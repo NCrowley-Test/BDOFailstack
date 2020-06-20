@@ -8,7 +8,7 @@ itemType = int(input("Enter 1 for Weapon, 2 for Armor, 3 for accessory, 4 for Ho
 if itemType != 4:
     levelAttempted = int(input("Enter what level you're trying to enhance to in number form(eg: pri = 1) "))
 
-failstack = float(input("Enter your Failstack: "))
+failstack = int(input("Enter your Failstack: "))
 
 if itemType == 1:
     if levelAttempted == 1:
@@ -69,11 +69,11 @@ if itemType == 2:
         else:
             oddsSuccess = round(70 + (failstack - 102) * .125, 2)
         print("Softcap FS is 102")
-# Tet Weapon Stack
+# Tet Armor Stack
     elif levelAttempted == 4:
         oddsSuccess = round(2 + .2 * failstack, 2)
         print("Softcap Unknown")
-# Pen Weapon Stack
+# Pen Armor Stack
     elif levelAttempted == 5:
         oddsSuccess = round(.3 + .03 * failstack, 2)
         print("No softcap known")
