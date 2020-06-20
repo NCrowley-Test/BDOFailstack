@@ -1,12 +1,20 @@
 #Calculator to try and determine how useful a failstack is for a certain level of enhancement
 #Includes estimated number of attempts when cronning an item
 #Todo includes Dead God, and RNG calculator for attempts in app
+import random
 
 itemType = int(input("Enter 1 for Weapon, 2 for Armor, 3 for accessory, 4 for Horse or 5 for Blackstar Weapons: "))
+while itemType > 5 or itemType < 1:
+    print("Please pick a valid number:")
+    itemType = int(input("Enter 1 for Weapon, 2 for Armor, 3 for accessory, 4 for Horse or 5 for Blackstar Weapons: "))
+
 
 #Horses don't have different levels you can enhance to, you can only go from tier 8 to tier 9.
 if itemType != 4:
     levelAttempted = int(input("Enter what level you're trying to enhance to in number form(eg: pri = 1) "))
+    while levelAttempted > 5 or levelAttempted < 1:
+        print("Please pick a valid number:")
+        levelAttempted = int(input("Enter what level you're trying to enhance to in number form(eg: pri = 1) "))
 
 failstack = int(input("Enter your Failstack: "))
 
@@ -120,19 +128,21 @@ if itemType == 3:
 if itemType == 4:
     oddsSuccess = 1 + .2 * failstack
 
-#Blackstar Weapon, there is no softcap so math is simple. I don't have a tet to test for pen attempts
+#Blackstar Weapon, there is no softcap so math is simple. I don't have a tet to test for pen attempts, so that might be incorrect.
 if itemType == 5:
     if levelAttempted == 1:
-        oddsSuccess = 13.08 + failstack * 1.308
+        oddsSuccess = round(13.08 + failstack * 1.308, 2)
     elif levelAttempted == 2:
-        oddsSuccess = 10.63 + 1.063 * failstack
+        oddsSuccess = round(10.63 + 1.063 * failstack, 2)
     elif levelAttempted == 3:
-        oddsSuccess = 3.4 + .34 * failstack
+        oddsSuccess = round(3.4 + .34 * failstack, 2)
     elif levelAttempted == 4:
-        oddsSuccess = 0.51 + .051 * failstack
+        oddsSuccess = round(0.51 + .051 * failstack,2)
     elif levelAttempted == 5:
-        oddsSuccess = .2 + .02 * failstack
+        oddsSuccess = round(.2 + .02 * failstack, 2)
         print("Uncertain of actual odds")
+
+
 
 print("Odds of Success:")
 print(oddsSuccess)
@@ -183,4 +193,12 @@ else:
         index += 1
     print("Number of attempts to get a 90% chance of success: ")
     print(index)
+
+#Generate a single attmempt
+chanceSucceeded = random.random() * 100
+print("If you tried to succeed with this stack, you would have:")
+if oddsSuccess > chanceSucceeded:
+    print("Succeeded")
+else:
+    print("Failed")
 
