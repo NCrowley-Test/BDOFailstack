@@ -1,6 +1,7 @@
 
 itemType = int(input("Enter 1 for Weapon, 2 for Armor, 3 for accessory or 4 for Horse: "))
 
+#Horses don't have different levels you can enhance to, you can only go from tier 8 to tier 9.
 if itemType != 4:
     levelAttempted = int(input("Enter what level you're trying to enhance to in number form(eg: pri = 1) "))
 
@@ -128,10 +129,10 @@ print(oddsSuccess)
 if itemType !=4:
     crons = 1
     percentOdds = oddsSuccess * .01
-    floatingVar = 1 - percentOdds
+    inverseOdds = 1 - percentOdds
     index = 1
     while crons > 0.5:
-        crons = floatingVar ** index
+        crons = inverseOdds ** index
         index += 1
 
     print("Number of attempts to get a 50% chance of succeeding using crons: ")
@@ -139,7 +140,7 @@ if itemType !=4:
     crons = 1
     index = 1
     while crons > 0.1:
-        crons = floatingVar ** index
+        crons = inverseOdds ** index
         index += 1
     print("Number of attempts to get a 90% chance of succeeding using crons: ")
     print(index)
@@ -150,18 +151,18 @@ if itemType !=4:
 else:
     crons = 1
     percentOdds = oddsSuccess * .01
-    floatingVar = 1 - percentOdds
+    inverseOdds = 1 - percentOdds
     index = 0
 
     while crons > .5:
-        crons = (floatingVar - (.002 * index)) ** index
+        crons = (inverseOdds - (.002 * index)) ** index
         index += 1
     print("Number of attempts to get a 50% chance of success: ")
     print(index)
     crons = 1
     index = 0
     while crons > .1:
-        crons = (floatingVar - (.002 * index)) ** index
+        crons = (inverseOdds - (.002 * index)) ** index
         index += 1
     print("Number of attempts to get a 90% chance of success: ")
     print(index)
