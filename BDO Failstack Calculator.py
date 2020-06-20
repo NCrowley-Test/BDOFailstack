@@ -1,3 +1,6 @@
+#Calculator to try and determine how useful a failstack is for a certain level of enhancement
+#Includes estimated number of attempts when cronning an item
+#Todo includes Blackstar weapons, Dead God, and RNG calculator for attempts in app
 
 itemType = int(input("Enter 1 for Weapon, 2 for Armor, 3 for accessory or 4 for Horse: "))
 

@@ -83,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592665982598</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="version 1, includes armor, non BS weapons, jewelry, horses">
+      <created>1592666322964</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1592666322964</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -95,10 +102,10 @@
       <screen x="0" y="0" width="2133" height="1200" />
     </state>
     <state x="520" y="251" width="1175" height="645" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2133.1200@0.0.2133.1200" timestamp="1592666141870" />
-    <state x="532" y="82" width="1058" height="945" key="CommitChangelistDialog2" timestamp="1592665982419">
+    <state x="532" y="82" width="1058" height="915" key="CommitChangelistDialog2" timestamp="1592666322777">
       <screen x="0" y="0" width="2133" height="1200" />
     </state>
-    <state x="532" y="82" width="1058" height="945" key="CommitChangelistDialog2/0.0.2133.1200@0.0.2133.1200" timestamp="1592665982419" />
+    <state x="532" y="82" width="1058" height="915" key="CommitChangelistDialog2/0.0.2133.1200@0.0.2133.1200" timestamp="1592666322777" />
     <state x="837" y="274" width="530" height="568" key="FileChooserDialogImpl" timestamp="1592666140043">
       <screen x="0" y="0" width="2133" height="1200" />
     </state>
