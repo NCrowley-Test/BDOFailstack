@@ -116,11 +116,11 @@ if itemType == 3:
     else:
         print("Bad Level Attempted")
 
-#Horse Attempts
+#Horse Attempts, softcap and levels don't exist so math is pretty simple
 if itemType == 4:
     oddsSuccess = 1 + .2 * failstack
 
-#Blackstar Weapon
+#Blackstar Weapon, there is no softcap so math is simple. I don't have a tet to test for pen attempts
 if itemType == 5:
     if levelAttempted == 1:
         oddsSuccess = 13.08 + failstack * 1.308
