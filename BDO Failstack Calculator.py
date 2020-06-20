@@ -1,8 +1,8 @@
 #Calculator to try and determine how useful a failstack is for a certain level of enhancement
 #Includes estimated number of attempts when cronning an item
-#Todo includes Blackstar weapons, Dead God, and RNG calculator for attempts in app
+#Todo includes Dead God, and RNG calculator for attempts in app
 
-itemType = int(input("Enter 1 for Weapon, 2 for Armor, 3 for accessory or 4 for Horse: "))
+itemType = int(input("Enter 1 for Weapon, 2 for Armor, 3 for accessory, 4 for Horse or 5 for Blackstar Weapons: "))
 
 #Horses don't have different levels you can enhance to, you can only go from tier 8 to tier 9.
 if itemType != 4:
@@ -120,6 +120,19 @@ if itemType == 3:
 if itemType == 4:
     oddsSuccess = 1 + .2 * failstack
 
+#Blackstar Weapon
+if itemType == 5:
+    if levelAttempted == 1:
+        oddsSuccess = 13.08 + failstack * 1.308
+    elif levelAttempted == 2:
+        oddsSuccess = 10.63 + 1.063 * failstack
+    elif levelAttempted == 3:
+        oddsSuccess = 3.4 + .34 * failstack
+    elif levelAttempted == 4:
+        oddsSuccess = 0.51 + .051 * failstack
+    elif levelAttempted == 5:
+        oddsSuccess = .2 + .02 * failstack
+        print("Uncertain of actual odds")
 
 print("Odds of Success:")
 print(oddsSuccess)
@@ -129,6 +142,7 @@ print(oddsSuccess)
 #You have to take into account the times where you succeed twice in a row, so it's not as simple as 5% chance means that it takes 20 attempts on average
 #Essentially the odds of at least one success (odds that it won't happen) ^ (number of attempts)
 #We iterate through on number of attempts to find asymptotes at 50% and 90% chance of at least one success
+#Crons checks at .1 because at that point there's a 10% chance you haven't succeeded, and therefore a 90% chance you've succeeded at least once
 if itemType !=4:
     crons = 1
     percentOdds = oddsSuccess * .01
