@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5da11dbb-4d8a-48c0-be99-15f0a54c8724" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1daaaka1xwXemU4KhJTQu5K0jZs" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5da11dbb-4d8a-48c0-be99-15f0a54c8724" name="Default Changelist" comment="" />
+      <created>1592665722277</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1592665722277</updated>
+    </task>
+    <task id="LOCAL-00001" summary="version 1, includes armor, non BS weapons, jewelry, horses">
+      <created>1592665801546</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1592665801546</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="version 1, includes armor, non BS weapons, jewelry, horses" />
+    <option name="LAST_COMMIT_MESSAGE" value="version 1, includes armor, non BS weapons, jewelry, horses" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="520" y="251" width="1184" height="668" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592665770889">
+      <screen x="0" y="0" width="2133" height="1200" />
+    </state>
+    <state x="520" y="251" width="1184" height="668" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2133.1200@0.0.2133.1200" timestamp="1592665770889" />
+    <state x="532" y="82" width="1058" height="1005" key="CommitChangelistDialog2" timestamp="1592665801320">
+      <screen x="0" y="0" width="2133" height="1200" />
+    </state>
+    <state x="532" y="82" width="1058" height="1005" key="CommitChangelistDialog2/0.0.2133.1200@0.0.2133.1200" timestamp="1592665801320" />
+    <state x="430" y="147" width="1261" height="875" key="SettingsEditor" timestamp="1592665927149">
+      <screen x="0" y="0" width="2133" height="1200" />
+    </state>
+    <state x="430" y="147" width="1261" height="875" key="SettingsEditor/0.0.2133.1200@0.0.2133.1200" timestamp="1592665927149" />
+    <state x="796" y="496" width="530" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1592665835534">
+      <screen x="0" y="0" width="2133" height="1200" />
+    </state>
+    <state x="796" y="496" width="530" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2133.1200@0.0.2133.1200" timestamp="1592665835534" />
+  </component>
+</project>
