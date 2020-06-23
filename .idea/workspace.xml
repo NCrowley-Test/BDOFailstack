@@ -119,32 +119,40 @@
       <option name="project" value="LOCAL" />
       <updated>1592682245128</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="version 1.2, includes armor, weapons, jewelry, horses, single RNG attempt">
+      <created>1592683469730</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1592683469730</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="version 1, includes armor, non BS weapons, jewelry, horses" />
     <MESSAGE value="version 1, includes armor, weapons, jewelry, horses" />
     <MESSAGE value="version 1.1, includes armor, weapons, jewelry, horses" />
-    <option name="LAST_COMMIT_MESSAGE" value="version 1.1, includes armor, weapons, jewelry, horses" />
+    <MESSAGE value="version 1.2, includes armor, weapons, jewelry, horses, single RNG attempt" />
+    <option name="LAST_COMMIT_MESSAGE" value="version 1.2, includes armor, weapons, jewelry, horses, single RNG attempt" />
   </component>
   <component name="WindowStateProjectService">
     <state x="520" y="251" width="1175" height="645" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592666141870">
       <screen x="0" y="0" width="2133" height="1200" />
     </state>
     <state x="520" y="251" width="1175" height="645" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2133.1200@0.0.2133.1200" timestamp="1592666141870" />
-    <state x="532" y="82" width="1058" height="735" key="CommitChangelistDialog2" timestamp="1592683298272">
+    <state x="532" y="82" width="1058" height="675" key="CommitChangelistDialog2" timestamp="1592690555340">
       <screen x="0" y="0" width="2133" height="1200" />
     </state>
-    <state x="532" y="82" width="1058" height="735" key="CommitChangelistDialog2/0.0.2133.1200@0.0.2133.1200" timestamp="1592683298272" />
+    <state x="532" y="82" width="1058" height="675" key="CommitChangelistDialog2/0.0.2133.1200@0.0.2133.1200" timestamp="1592690555340" />
     <state x="837" y="274" width="530" height="568" key="FileChooserDialogImpl" timestamp="1592666140043">
       <screen x="0" y="0" width="2133" height="1200" />
     </state>
     <state x="837" y="274" width="530" height="568" key="FileChooserDialogImpl/0.0.2133.1200@0.0.2133.1200" timestamp="1592666140043" />
-    <state x="738" y="448" width="645" height="275" key="Github.CreatePullRequestDialog" timestamp="1592666043701">
+    <state x="738" y="448" width="645" height="275" key="Github.CreatePullRequestDialog" timestamp="1592929223898">
       <screen x="0" y="0" width="2133" height="1200" />
     </state>
-    <state x="738" y="448" width="645" height="275" key="Github.CreatePullRequestDialog/0.0.2133.1200@0.0.2133.1200" timestamp="1592666043701" />
+    <state x="738" y="448" width="645" height="275" key="Github.CreatePullRequestDialog/0.0.2133.1200@0.0.2133.1200" timestamp="1592929223898" />
     <state width="2104" height="308" key="GridCell.Tab.0.bottom" timestamp="1592683441263">
       <screen x="0" y="0" width="2133" height="1200" />
     </state>
@@ -165,9 +173,9 @@
       <screen x="0" y="0" width="2133" height="1200" />
     </state>
     <state x="430" y="147" width="1261" height="875" key="SettingsEditor/0.0.2133.1200@0.0.2133.1200" timestamp="1592665927149" />
-    <state x="796" y="496" width="539" height="207" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1592665960870">
+    <state x="796" y="496" width="530" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1592929200251">
       <screen x="0" y="0" width="2133" height="1200" />
     </state>
-    <state x="796" y="496" width="539" height="207" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2133.1200@0.0.2133.1200" timestamp="1592665960870" />
+    <state x="796" y="496" width="530" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2133.1200@0.0.2133.1200" timestamp="1592929200251" />
   </component>
 </project>
