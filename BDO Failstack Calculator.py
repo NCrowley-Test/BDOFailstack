@@ -2,15 +2,15 @@
 #Includes estimated number of attempts when cronning an item
 #Todo includes Dead God, and RNG calculator for attempts in app
 import random
-from enum import Enum
-class enhanceType(Enum):
+from enum import IntEnum
+class enhanceType(IntEnum):
     Weapon = 1
     Armor = 2
     Accessory = 3
     Horse = 4
     BlackstarWeapon = 5
 
-class enhanceLevel(Enum):
+class enhanceLevel(IntEnum):
     Pri = 1
     Duo = 2
     Tri = 3
@@ -21,12 +21,12 @@ itemType = int(input("Enter 1 for Weapon, 2 for Armor, 3 for Accessory, 4 for Ho
 while itemType > 5 or itemType < 1:
     print("Please pick a valid number:")
     itemType = int(input("Enter 1 for Weapon, 2 for Armor, 3 for Accessory, 4 for Horse or 5 for Blackstar Weapons: "))
-
+print(enhanceLevel.Pri)
 
 #Horses don't have different levels you can enhance to, you can only go from tier 8 to tier 9.
 if itemType != enhanceType.Horse:
     levelAttempted = int(input("Enter what level you're trying to enhance to in number form(eg: pri = 1) "))
-    while levelAttempted > enhanceLevel.Pen or levelAttempted < enhanceLevel.Pri:
+    while levelAttempted > 5 or levelAttempted < 1:
         print("Please pick a valid number:")
         levelAttempted = int(input("Enter what level you're trying to enhance to in number form(eg: pri = 1) "))
 
