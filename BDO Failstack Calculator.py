@@ -181,7 +181,6 @@ if itemType !=enhanceType.Horse:
     #Because of how the loop works, need to subtract one to get the number of iterations before success
     index -= 1
     print("Number of attempts to get a 90% chance of succeeding using crons: ", index)
-    print(index)
 
 #Horse attempts can't be cronned in the same way, the failstack still goes up.
 #In order to determine odds of success we need to account for this
