@@ -148,10 +148,10 @@ elif itemType == enhanceType.BlackstarWeapon:
         oddsSuccess = round(.2 + .02 * failstack, 2)
         print("Uncertain of actual odds")
 
-
-
-print("Odds of Success:")
-print(oddsSuccess)
+#Max odds can be is 100%
+if oddsSuccess > 100:
+    oddsSuccess = 100
+print("Odds of Success:", oddsSuccess)
 
 #Function to find expected number of attempts to succeed half the time and 90% of the time
 #Percentages are weird, we have to use exponents to determine how many attempts it will take
@@ -171,8 +171,8 @@ if itemType !=enhanceType.Horse:
         index += 1
     #Because of how the loop works, need to subtract one to get the number of iterations before success
     index -= 1
-    print("Number of attempts to get a 50% chance of succeeding using crons: ")
-    print(index)
+    print("Number of attempts to get a 50% chance of succeeding using crons: ", index)
+    #Reset to check 90%
     crons = 1
     index = 1
     while crons > 0.1:
@@ -180,7 +180,7 @@ if itemType !=enhanceType.Horse:
         index += 1
     #Because of how the loop works, need to subtract one to get the number of iterations before success
     index -= 1
-    print("Number of attempts to get a 90% chance of succeeding using crons: ")
+    print("Number of attempts to get a 90% chance of succeeding using crons: ", index)
     print(index)
 
 #Horse attempts can't be cronned in the same way, the failstack still goes up.
@@ -196,11 +196,10 @@ else:
     while crons > .5:
         crons = (inverseOdds - (.002 * index)) ** index
         index += 1
-    print("Number of attempts to get a 50% chance of success: ")
     #Because of how the loop works, need to subtract one to get the number of iterations before success
     index -= 1
-    print(index)
-
+    print("Number of attempts to get a 50% chance of success: ", index)
+    #Reset to check 90%
     crons = 1
     index = 1
     while crons > .1:
@@ -208,15 +207,13 @@ else:
         index += 1
     #Because of how the loop works, need to subtract one to get the number of iterations before success
     index -= 1
-    print("Number of attempts to get a 90% chance of success: ")
-    print(index)
+    print("Number of attempts to get a 90% chance of success: ", index)
 
 #Generate a single attmempt on the given odds
 #Annoyingly random.range returns an int, so random.random() * 100 is required
 chanceSucceeded = random.random() * 100
-print("If you tried to succeed with this stack, you would have:")
 if oddsSuccess > chanceSucceeded:
-    print("Succeeded")
+    print("If you tried to succeed with this stack, you would have successfully enhanced.")
 else:
-    print("Failed")
+    print("If you tried to succeed with this stack, you would have failed.")
 
