@@ -18,15 +18,14 @@ class enhanceLevel(IntEnum):
     Pen = 5
 
 itemType = int(input("Enter 1 for Weapon, 2 for Armor, 3 for Accessory, 4 for Horse or 5 for Blackstar Weapons: "))
-while itemType > 5 or itemType < 1:
+while itemType not in(1,2,3,4,5):
     print("Please pick a valid number:")
     itemType = int(input("Enter 1 for Weapon, 2 for Armor, 3 for Accessory, 4 for Horse or 5 for Blackstar Weapons: "))
-print(enhanceLevel.Pri)
 
 #Horses don't have different levels you can enhance to, you can only go from tier 8 to tier 9.
 if itemType != enhanceType.Horse:
     levelAttempted = int(input("Enter what level you're trying to enhance to in number form(eg: pri = 1) "))
-    while levelAttempted > 5 or levelAttempted < 1:
+    while levelAttempted not in(1,2,3,4,5):
         print("Please pick a valid number:")
         levelAttempted = int(input("Enter what level you're trying to enhance to in number form(eg: pri = 1) "))
 
@@ -62,7 +61,7 @@ if itemType == enhanceType.Weapon:
 #Pen Weapon Stack
     elif levelAttempted == enhanceLevel.Pen:
         oddsSuccess = round(.3 + .03 * failstack, 2)
-        print("No softcap known")
+        print("Softcap unknown")
 
 
 
@@ -95,7 +94,7 @@ elif itemType == enhanceType.Armor:
 # Pen Armor Stack
     elif levelAttempted == enhanceLevel.Pen:
         oddsSuccess = round(.3 + .03 * failstack, 2)
-        print("No softcap known")
+        print("Softcap Unknown")
 
 
 elif itemType == enhanceType.Accessory:
@@ -106,22 +105,21 @@ elif itemType == enhanceType.Accessory:
             oddsSuccess = round(25 + 2.5 * failstack)
         else:
             oddsSuccess = round(70 + (failstack - 18) * .5)
-        print("Softcap = 18")
-
+        print("Softcap is 18")
     #Duo Accessory Stack
     elif levelAttempted == enhanceLevel.Duo:
         if failstack < 40:
             oddsSuccess = round(10 + 1 * failstack, 2)
         else:
             oddsSuccess = round(50 + (failstack - 40) * .2, 2)
-        print("Softcap = 40")
+        print("Softcap is 40")
     #Tri Accessory Stack
     elif levelAttempted == enhanceLevel.Tri:
         if failstack < 44:
             oddsSuccess = round(7.5 + .75 * failstack, 2)
         else:
             oddsSuccess = round(40.5 + (failstack - 44) * .15, 2)
-        print("Softcap = 44")
+        print("Softcap is 44")
     elif levelAttempted == enhanceLevel.Tet:
         if failstack < 110:
             oddsSuccess = round(2.5 + .25 * failstack, 2)
@@ -134,7 +132,7 @@ elif itemType == enhanceType.Accessory:
 
 #Horse Attempts, softcap and levels don't exist so math is pretty simple
 elif itemType == enhanceType.Horse:
-    oddsSuccess = 1 + .2 * failstack
+    oddsSuccess = round(1 + .2 * failstack, 2)
 
 #Blackstar Weapon, there is no softcap so math is simple. I don't have a tet to test for pen attempts, so that might be incorrect.
 elif itemType == enhanceType.BlackstarWeapon:
@@ -171,7 +169,8 @@ if itemType !=enhanceType.Horse:
     while crons > 0.5:
         crons = inverseOdds ** index
         index += 1
-
+    #Because of how the loop works, need to subtract one to get the number of iterations before success
+    index -= 1
     print("Number of attempts to get a 50% chance of succeeding using crons: ")
     print(index)
     crons = 1
@@ -179,6 +178,8 @@ if itemType !=enhanceType.Horse:
     while crons > 0.1:
         crons = inverseOdds ** index
         index += 1
+    #Because of how the loop works, need to subtract one to get the number of iterations before success
+    index -= 1
     print("Number of attempts to get a 90% chance of succeeding using crons: ")
     print(index)
 
@@ -190,22 +191,28 @@ else:
     crons = 1
     percentOdds = oddsSuccess * .01
     inverseOdds = 1 - percentOdds
-    index = 0
+    index = 1
 
     while crons > .5:
         crons = (inverseOdds - (.002 * index)) ** index
         index += 1
     print("Number of attempts to get a 50% chance of success: ")
+    #Because of how the loop works, need to subtract one to get the number of iterations before success
+    index -= 1
     print(index)
+
     crons = 1
-    index = 0
+    index = 1
     while crons > .1:
         crons = (inverseOdds - (.002 * index)) ** index
         index += 1
+    #Because of how the loop works, need to subtract one to get the number of iterations before success
+    index -= 1
     print("Number of attempts to get a 90% chance of success: ")
     print(index)
 
-#Generate a single attmempt
+#Generate a single attmempt on the given odds
+#Annoyingly random.range returns an int, so random.random() * 100 is required
 chanceSucceeded = random.random() * 100
 print("If you tried to succeed with this stack, you would have:")
 if oddsSuccess > chanceSucceeded:
