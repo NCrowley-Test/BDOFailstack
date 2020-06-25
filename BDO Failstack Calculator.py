@@ -3,6 +3,7 @@
 #Todo includes Dead God, and RNG calculator for attempts in app
 import random
 from enum import IntEnum
+
 class enhanceType(IntEnum):
     Weapon = 1
     Armor = 2
@@ -17,19 +18,40 @@ class enhanceLevel(IntEnum):
     Tet = 4
     Pen = 5
 
-itemType = int(input("Enter 1 for Weapon, 2 for Armor, 3 for Accessory, 4 for Horse or 5 for Blackstar Weapons: "))
+try:
+    itemType = int(input("Enter 1 for Weapon, 2 for Armor, 3 for Accessory, 4 for Horse or 5 for Blackstar Weapons: "))
+except:
+    print("Please pick a valid number")
+    itemType = 1
+
 while itemType not in(1,2,3,4,5):
     print("Please pick a valid number:")
-    itemType = int(input("Enter 1 for Weapon, 2 for Armor, 3 for Accessory, 4 for Horse or 5 for Blackstar Weapons: "))
+    try:
+        itemType = int(input("Enter 1 for Weapon, 2 for Armor, 3 for Accessory, 4 for Horse or 5 for Blackstar Weapons: "))
+    except:
+        print("Please pick a valid number")
+        itemType = 1
 
 #Horses don't have different levels you can enhance to, you can only go from tier 8 to tier 9.
 if itemType != enhanceType.Horse:
-    levelAttempted = int(input("Enter what level you're trying to enhance to in number form(eg: pri = 1) "))
+    try:
+        levelAttempted = int(input("Enter what level you're trying to enhance to in number form(eg: pri = 1) "))
+    except:
+        print("Please pick a valid number")
+        levelAttempted = 1
     while levelAttempted not in(1,2,3,4,5):
         print("Please pick a valid number:")
-        levelAttempted = int(input("Enter what level you're trying to enhance to in number form(eg: pri = 1) "))
+        try:
+            levelAttempted = int(input("Enter what level you're trying to enhance to in number form(eg: pri = 1) "))
+        except:
+            print("Please pick a valid number")
+            levelAttempted = 1
 
-failstack = int(input("Enter your Failstack: "))
+try:
+    failstack = abs(int(input("Enter your Failstack: ")))
+except:
+    print("Please pick a number")
+    failstack = 1
 
 if itemType == enhanceType.Weapon:
     if levelAttempted == enhanceLevel.Pri:
