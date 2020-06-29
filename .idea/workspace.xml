@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5da11dbb-4d8a-48c0-be99-15f0a54c8724" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/BDOFailstack.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BDOFailstack.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BDO Failstack Calculator.py" beforeDir="false" afterPath="$PROJECT_DIR$/BDO Failstack Calculator.py" afterDir="false" />
     </list>
@@ -33,25 +34,22 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/BDO Failstack Calculator.py" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/Programs/Python/Python38-32" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">
     <configuration name="BDO Failstack Calculator" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="BDOFailstack" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="$PROJECT_DIR$/../HelloWorld/venv/bin/python" />
+      <option name="SDK_HOME" value="C:\Users\N\AppData\Local\Programs\Python\Python38-32\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BDO Failstack Calculator.py" />
       <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
@@ -175,17 +173,19 @@
     <option name="LAST_COMMIT_MESSAGE" value="version 1.2.2, includes armor, weapons, jewelry, horses, single RNG attempt&#10;&#10;fixed number of attempts to get to 50%/90%" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="520" y="251" width="1175" height="645" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592666141870">
-      <screen x="0" y="0" width="2133" height="1200" />
+    <state x="499" y="233" width="1175" height="645" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593447762928">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
+    <state x="499" y="233" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1593447762928" />
     <state x="520" y="251" width="1175" height="645" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2133.1200@0.0.2133.1200" timestamp="1592666141870" />
     <state x="532" y="82" width="1058" height="525" key="CommitChangelistDialog2" timestamp="1593117758481">
       <screen x="0" y="0" width="2133" height="1200" />
     </state>
     <state x="532" y="82" width="1058" height="525" key="CommitChangelistDialog2/0.0.2133.1200@0.0.2133.1200" timestamp="1593117758481" />
-    <state x="837" y="274" width="530" height="568" key="FileChooserDialogImpl" timestamp="1592666140043">
-      <screen x="0" y="0" width="2133" height="1200" />
+    <state x="804" y="254" width="530" height="568" key="FileChooserDialogImpl" timestamp="1593447679352">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
+    <state x="804" y="254" key="FileChooserDialogImpl/0.0.2048.1112@0.0.2048.1112" timestamp="1593447679352" />
     <state x="837" y="274" width="530" height="568" key="FileChooserDialogImpl/0.0.2133.1200@0.0.2133.1200" timestamp="1592666140043" />
     <state x="738" y="448" width="645" height="275" key="Github.CreatePullRequestDialog" timestamp="1593117777543">
       <screen x="0" y="0" width="2133" height="1200" />
@@ -207,9 +207,10 @@
       <screen x="0" y="0" width="2133" height="1200" />
     </state>
     <state width="2104" height="308" key="GridCell.Tab.0.right/0.0.2133.1200@0.0.2133.1200" timestamp="1593118519135" />
-    <state x="430" y="147" width="1261" height="875" key="SettingsEditor" timestamp="1592665927149">
-      <screen x="0" y="0" width="2133" height="1200" />
+    <state x="413" y="136" width="1261" height="875" key="SettingsEditor" timestamp="1593447726405">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
+    <state x="413" y="136" key="SettingsEditor/0.0.2048.1112@0.0.2048.1112" timestamp="1593447726405" />
     <state x="430" y="147" width="1261" height="875" key="SettingsEditor/0.0.2133.1200@0.0.2133.1200" timestamp="1592665927149" />
     <state x="561" y="273" width="1000" height="625" key="Vcs.Push.Dialog.v2" timestamp="1592929263132">
       <screen x="0" y="0" width="2133" height="1200" />

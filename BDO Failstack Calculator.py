@@ -18,40 +18,34 @@ class enhanceLevel(IntEnum):
     Tet = 4
     Pen = 5
 
-try:
-    itemType = int(input("Enter 1 for Weapon, 2 for Armor, 3 for Accessory, 4 for Horse or 5 for Blackstar Weapons: "))
-except:
-    print("Please pick a valid number")
-    itemType = 1
+itemType = 0
 
 while itemType not in(1,2,3,4,5):
-    print("Please pick a valid number:")
     try:
         itemType = int(input("Enter 1 for Weapon, 2 for Armor, 3 for Accessory, 4 for Horse or 5 for Blackstar Weapons: "))
     except:
         print("Please pick a valid number")
-        itemType = 1
 
+
+
+levelAttempted = 0
 #Horses don't have different levels you can enhance to, you can only go from tier 8 to tier 9.
 if itemType != enhanceType.Horse:
-    try:
-        levelAttempted = int(input("Enter what level you're trying to enhance to in number form(eg: pri = 1) "))
-    except:
-        print("Please pick a valid number")
-        levelAttempted = 1
+
     while levelAttempted not in(1,2,3,4,5):
-        print("Please pick a valid number:")
         try:
             levelAttempted = int(input("Enter what level you're trying to enhance to in number form(eg: pri = 1) "))
         except:
             print("Please pick a valid number")
-            levelAttempted = 1
 
-try:
-    failstack = abs(int(input("Enter your Failstack: ")))
-except:
-    print("Please pick a number")
-    failstack = 1
+
+failstack = -1
+while failstack == -1:
+    try:
+        failstack = abs(int(input("Enter your Failstack: ")))
+    except:
+        print("Please pick a number")
+
 
 if itemType == enhanceType.Weapon:
     if levelAttempted == enhanceLevel.Pri:
