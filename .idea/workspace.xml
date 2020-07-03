@@ -1,8 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="5da11dbb-4d8a-48c0-be99-15f0a54c8724" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/BDOFailstack.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BDOFailstack.iml" afterDir="false" />
+    <list default="true" id="5da11dbb-4d8a-48c0-be99-15f0a54c8724" name="Default Changelist" comment="version 1.3.1, made try/excepts cleaner">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BDO Failstack Calculator.py" beforeDir="false" afterPath="$PROJECT_DIR$/BDO Failstack Calculator.py" afterDir="false" />
     </list>
@@ -159,8 +176,27 @@
       <option name="project" value="LOCAL" />
       <updated>1593117758580</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="version 1.3.1, made try/excepts cleaner">
+      <created>1593448143941</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1593448143941</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="version 1, includes armor, non BS weapons, jewelry, horses" />
@@ -170,7 +206,8 @@
     <MESSAGE value="version 1.2.1, includes armor, weapons, jewelry, horses, single RNG attempt" />
     <MESSAGE value="version 1.2.1.1, includes armor, weapons, jewelry, horses, single RNG attempt" />
     <MESSAGE value="version 1.2.2, includes armor, weapons, jewelry, horses, single RNG attempt&#10;&#10;fixed number of attempts to get to 50%/90%" />
-    <option name="LAST_COMMIT_MESSAGE" value="version 1.2.2, includes armor, weapons, jewelry, horses, single RNG attempt&#10;&#10;fixed number of attempts to get to 50%/90%" />
+    <MESSAGE value="version 1.3.1, made try/excepts cleaner" />
+    <option name="LAST_COMMIT_MESSAGE" value="version 1.3.1, made try/excepts cleaner" />
   </component>
   <component name="WindowStateProjectService">
     <state x="499" y="233" width="1175" height="645" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593447762928">
@@ -212,9 +249,10 @@
     </state>
     <state x="413" y="136" key="SettingsEditor/0.0.2048.1112@0.0.2048.1112" timestamp="1593447726405" />
     <state x="430" y="147" width="1261" height="875" key="SettingsEditor/0.0.2133.1200@0.0.2133.1200" timestamp="1592665927149" />
-    <state x="561" y="273" width="1000" height="625" key="Vcs.Push.Dialog.v2" timestamp="1592929263132">
-      <screen x="0" y="0" width="2133" height="1200" />
+    <state x="539" y="253" width="1000" height="625" key="Vcs.Push.Dialog.v2" timestamp="1593448147877">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
+    <state x="539" y="253" key="Vcs.Push.Dialog.v2/0.0.2048.1112@0.0.2048.1112" timestamp="1593448147877" />
     <state x="561" y="273" width="1000" height="625" key="Vcs.Push.Dialog.v2/0.0.2133.1200@0.0.2133.1200" timestamp="1592929263132" />
     <state x="796" y="496" width="530" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1592929200251">
       <screen x="0" y="0" width="2133" height="1200" />
