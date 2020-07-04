@@ -9,7 +9,7 @@ class enhanceType(IntEnum):
     Armor = 2
     Accessory = 3
     Horse = 4
-    BlackstarWeapon = 5
+    Blackstar_Weapon = 5
 
 class enhanceLevel(IntEnum):
     Pri = 1
@@ -17,6 +17,7 @@ class enhanceLevel(IntEnum):
     Tri = 3
     Tet = 4
     Pen = 5
+
 def get_Item_Type():
     item_Type = 0
     while item_Type not in(1,2,3,4,5):
@@ -28,8 +29,6 @@ def get_Item_Type():
 
 def get_Level_attempted():
     level_Attempted = 0
-
-
     while level_Attempted not in(1,2,3,4,5):
         try:
             level_Attempted = int(input("Enter what level you're trying to enhance to in number form(eg: pri = 1) "))
@@ -56,106 +55,102 @@ def get_Info():
     failstack = get_Failstack()
     return [item_Type, level_Attempted, failstack]
 
-
 def odds_Success(attempt):
     item_Type = int(attempt[0])
     level_Attempted = int(attempt[1])
     failstack = int(attempt[2])
     if item_Type == enhanceType.Weapon:
+        #Pri Weapon stack
         if level_Attempted == enhanceLevel.Pri:
-            # Pri Weapon stack
             if failstack < 50:
                 odds_Success = round(11.77 + 1.176 * failstack, 2)
             else:
                 odds_Success = round(70.56 + (failstack - 50) * .235, 2)
             print("Softcap FS is 50")
-
-        # Duo Weapon Stack
+        #Duo Weapon Stack
         elif level_Attempted == enhanceLevel.Duo:
             if failstack < 82:
                 odds_Success = round(7.69 + 0.769 * failstack, 2)
             else:
                 odds_Success = round(70.75 + (failstack - 82) * .15, 2)
             print("Softcap FS is 82")
-        # Tri Weapon Stack
+        #Tri Weapon Stack
         elif level_Attempted == enhanceLevel.Tri:
             if failstack < 102:
                 odds_Success = round(6.25 + .625 * failstack, 2)
             else:
                 odds_Success = round(70 + (failstack - 102) * .125, 2)
             print("Softcap FS is 102")
-        # Tet Weapon Stack
+        #Tet Weapon Stack
         elif level_Attempted == enhanceLevel.Tet:
             odds_Success = round(2 + .2 * failstack, 2)
             print("Softcap Unknown")
-        # Pen Weapon Stack
+        #Pen Weapon Stack
         elif level_Attempted == enhanceLevel.Pen:
             odds_Success = round(.3 + .03 * failstack, 2)
             print("Softcap unknown")
 
-
-
     elif item_Type == enhanceType.Armor:
-        # Pri Armor stack
+        #Pri Armor stack
         if level_Attempted == enhanceLevel.Pri:
             if failstack < 50:
                 odds_Success = round(11.77 + 1.176 * failstack, 2)
             else:
                 odds_Success = round(70.56 + (failstack - 50) * .235, 2)
             print("Softcap FS is 50")
-        # Duo Armor Stack
+        #Duo Armor Stack
         elif level_Attempted == enhanceLevel.Duo:
             if failstack < 82:
                 odds_Success = round(7.69 + 0.769 * failstack, 2)
             else:
                 odds_Success = round(70.75 + (failstack - 82) * .15, 2)
             print("Softcap FS is 82")
-        # Tri Armor Stack
+        #Tri Armor Stack
         elif level_Attempted == enhanceLevel.Tri:
             if failstack < 102:
                 odds_Success = round(6.25 + .625 * failstack, 2)
             else:
                 odds_Success = round(70 + (failstack - 102) * .125, 2)
             print("Softcap FS is 102")
-        # Tet Armor Stack
+        #Tet Armor Stack
         elif level_Attempted == enhanceLevel.Tet:
             odds_Success = round(2 + .2 * failstack, 2)
             print("Softcap Unknown")
-        # Pen Armor Stack
+        #Pen Armor Stack
         elif level_Attempted == enhanceLevel.Pen:
             odds_Success = round(.3 + .03 * failstack, 2)
             print("Softcap Unknown")
 
-
     elif item_Type == enhanceType.Accessory:
-
-        # Pri Accessory Stack
+        #Pri Accessory Stack
         if level_Attempted == enhanceLevel.Pri:
             if failstack < 18:
                 odds_Success = round(25 + 2.5 * failstack)
             else:
                 odds_Success = round(70 + (failstack - 18) * .5)
             print("Softcap is 18")
-        # Duo Accessory Stack
+        #Duo Accessory Stack
         elif level_Attempted == enhanceLevel.Duo:
             if failstack < 40:
                 odds_Success = round(10 + 1 * failstack, 2)
             else:
                 odds_Success = round(50 + (failstack - 40) * .2, 2)
             print("Softcap is 40")
-        # Tri Accessory Stack
+        #Tri Accessory Stack
         elif level_Attempted == enhanceLevel.Tri:
             if failstack < 44:
                 odds_Success = round(7.5 + .75 * failstack, 2)
             else:
                 odds_Success = round(40.5 + (failstack - 44) * .15, 2)
             print("Softcap is 44")
+        #Tet Accessory Stack
         elif level_Attempted == enhanceLevel.Tet:
             if failstack < 110:
                 odds_Success = round(2.5 + .25 * failstack, 2)
             else:
                 odds_Success = round(30 + (failstack - 110) * 0.05, 2)
             print("Softcap is 110")
+        #Pen Accessory Stack
         elif level_Attempted == enhanceLevel.Pen:
             odds_Success = round(.5 + failstack * .05, 2)
             print("Softcap unknown")
@@ -165,7 +160,7 @@ def odds_Success(attempt):
         odds_Success = round(1 + .2 * failstack, 2)
 
     # Blackstar Weapon, there is no softcap so math is simple. I don't have a tet to test for pen attempts, so that might be incorrect.
-    elif item_Type == enhanceType.BlackstarWeapon:
+    elif item_Type == enhanceType.Blackstar_Weapon:
         if level_Attempted == enhanceLevel.Pri:
             odds_Success = round(13.08 + failstack * 1.308, 2)
         elif level_Attempted == enhanceLevel.Duo:
@@ -178,7 +173,7 @@ def odds_Success(attempt):
             odds_Success = round(.2 + .02 * failstack, 2)
             print("Uncertain of actual odds")
 
-    # Max odds can be is 100%
+    #Max odds can be is 100%
     if odds_Success > 100:
         odds_Success = 100
     print("Odds of Success:", odds_Success)
@@ -205,6 +200,7 @@ def find_Odds_Over_Time(attempt, odds_Success):
         # Because of how the loop works, need to subtract one to get the number of iterations before success
         index -= 1
         print("Number of attempts to get a 50% chance of succeeding using crons: ", index)
+
         # Reset to check 90%
         crons = 1
         index = 1
@@ -218,19 +214,19 @@ def find_Odds_Over_Time(attempt, odds_Success):
     # Horse attempts can't be cronned in the same way, the failstack still goes up.
     # In order to determine odds of success we need to account for this
     # The odds of a horse attempt are 1% + .2% per failed attempt
-    # As such, our floating variable needs to go up by .2% per attempts
+    # As such, our floating variable needs to go up by .2% per attempt
     else:
         crons = 1
         percentOdds = odds_Success * .01
         inverseOdds = 1 - percentOdds
         index = 1
-
         while crons > .5:
             crons = (inverseOdds - (.002 * index)) ** index
             index += 1
-        # Because of how the loop works, need to subtract one to get the number of iterations before success
+         # Because of how the loop works, need to subtract one to get the number of iterations before success
         index -= 1
         print("Number of attempts to get a 50% chance of success: ", index)
+
         # Reset to check 90%
         crons = 1
         index = 1
@@ -245,7 +241,6 @@ def find_Odds_Over_Time(attempt, odds_Success):
 
 
 def RNG_Attempt(odds_Success):
-
     # Annoyingly random.range returns an int, so random.random() * 100 is required
     exit_Code = ''
     failed_Attempts = 0
@@ -259,10 +254,9 @@ def RNG_Attempt(odds_Success):
             print("If you tried to succeed with this stack, you would have failed. You have failed", failed_Attempts, "times.")
 
         exit_Code = str(input("Try again? Enter Q to quit"))
-        if exit_Code == "q" or exit_Code == "Q":
+        exit_Code = exit_Code.upper()
+        if exit_Code == "Q":
             exit()
-
-
 
 attempt = get_Info()
 odds_Success = odds_Success(attempt)
