@@ -10,6 +10,7 @@ class enhanceType(IntEnum):
     Accessory = 3
     Horse = 4
     Blackstar_Weapon = 5
+    Tuvala_Weapon_Armor = 6
 
 class enhanceLevel(IntEnum):
     Pri = 1
@@ -20,9 +21,9 @@ class enhanceLevel(IntEnum):
 
 def get_Item_Type():
     item_Type = 0
-    while item_Type not in(1,2,3,4,5):
+    while item_Type not in(1,2,3,4,5,6):
         try:
-            item_Type = int(input("Enter 1 for Weapon, 2 for Armor, 3 for Accessory, 4 for Horse or 5 for Blackstar Weapons: "))
+            item_Type = int(input("Enter 1 for Weapon, 2 for Armor, 3 for Accessory, 4 for Horse or 5 for Blackstar Weapons, 6 for Tuvala Weapons/Armor: "))
         except:
             print("Please pick a valid number")
     return item_Type
@@ -55,7 +56,7 @@ def get_Info():
     failstack = get_Failstack()
     return [item_Type, level_Attempted, failstack]
 
-def odds_Success(attempt):
+def get_Odds_Success(attempt):
     item_Type = int(attempt[0])
     level_Attempted = int(attempt[1])
     failstack = int(attempt[2])
@@ -65,21 +66,21 @@ def odds_Success(attempt):
             if failstack < 50:
                 odds_Success = round(11.77 + 1.176 * failstack, 2)
             else:
-                odds_Success = round(70.56 + (failstack - 50) * .235, 2)
+                odds_Success = round(70.56 + .235 * (failstack - 50), 2)
             print("Softcap FS is 50")
         #Duo Weapon Stack
         elif level_Attempted == enhanceLevel.Duo:
             if failstack < 82:
                 odds_Success = round(7.69 + 0.769 * failstack, 2)
             else:
-                odds_Success = round(70.75 + (failstack - 82) * .15, 2)
+                odds_Success = round(70.75 + .15 * (failstack - 82), 2)
             print("Softcap FS is 82")
         #Tri Weapon Stack
         elif level_Attempted == enhanceLevel.Tri:
             if failstack < 102:
                 odds_Success = round(6.25 + .625 * failstack, 2)
             else:
-                odds_Success = round(70 + (failstack - 102) * .125, 2)
+                odds_Success = round(70 + .125 * (failstack - 102), 2)
             print("Softcap FS is 102")
         #Tet Weapon Stack
         elif level_Attempted == enhanceLevel.Tet:
@@ -96,21 +97,21 @@ def odds_Success(attempt):
             if failstack < 50:
                 odds_Success = round(11.77 + 1.176 * failstack, 2)
             else:
-                odds_Success = round(70.56 + (failstack - 50) * .235, 2)
+                odds_Success = round(70.56 + .235 * (failstack - 50), 2)
             print("Softcap FS is 50")
         #Duo Armor Stack
         elif level_Attempted == enhanceLevel.Duo:
             if failstack < 82:
                 odds_Success = round(7.69 + 0.769 * failstack, 2)
             else:
-                odds_Success = round(70.75 + (failstack - 82) * .15, 2)
+                odds_Success = round(70.75 + .15 * (failstack - 82), 2)
             print("Softcap FS is 82")
         #Tri Armor Stack
         elif level_Attempted == enhanceLevel.Tri:
             if failstack < 102:
                 odds_Success = round(6.25 + .625 * failstack, 2)
             else:
-                odds_Success = round(70 + (failstack - 102) * .125, 2)
+                odds_Success = round(70 + .125 * (failstack - 102), 2)
             print("Softcap FS is 102")
         #Tet Armor Stack
         elif level_Attempted == enhanceLevel.Tet:
@@ -127,42 +128,43 @@ def odds_Success(attempt):
             if failstack < 18:
                 odds_Success = round(25 + 2.5 * failstack)
             else:
-                odds_Success = round(70 + (failstack - 18) * .5)
+                odds_Success = round(70 + .5 * (failstack - 18))
             print("Softcap is 18")
         #Duo Accessory Stack
         elif level_Attempted == enhanceLevel.Duo:
             if failstack < 40:
                 odds_Success = round(10 + 1 * failstack, 2)
             else:
-                odds_Success = round(50 + (failstack - 40) * .2, 2)
+                odds_Success = round(50 + .2 * (failstack - 40), 2)
             print("Softcap is 40")
         #Tri Accessory Stack
         elif level_Attempted == enhanceLevel.Tri:
             if failstack < 44:
                 odds_Success = round(7.5 + .75 * failstack, 2)
             else:
-                odds_Success = round(40.5 + (failstack - 44) * .15, 2)
+                odds_Success = round(40.5 + .15 * (failstack - 44), 2)
             print("Softcap is 44")
         #Tet Accessory Stack
         elif level_Attempted == enhanceLevel.Tet:
             if failstack < 110:
                 odds_Success = round(2.5 + .25 * failstack, 2)
             else:
-                odds_Success = round(30 + (failstack - 110) * 0.05, 2)
+                odds_Success = round(30 + 0.05 * (failstack - 110), 2)
             print("Softcap is 110")
         #Pen Accessory Stack
         elif level_Attempted == enhanceLevel.Pen:
-            odds_Success = round(.5 + failstack * .05, 2)
+            odds_Success = round(.5 + .05 * failstack, 2)
             print("Softcap unknown")
 
     # Horse Attempts, softcap and levels don't exist so math is pretty simple
     elif item_Type == enhanceType.Horse:
         odds_Success = round(1 + .2 * failstack, 2)
 
-    # Blackstar Weapon, there is no softcap so math is simple. I don't have a tet to test for pen attempts, so that might be incorrect.
+    # Blackstar Weapon, there is no softcap so math is simple.
+    # I don't have a tet to test for pen attempts, so that might be incorrect.
     elif item_Type == enhanceType.Blackstar_Weapon:
         if level_Attempted == enhanceLevel.Pri:
-            odds_Success = round(13.08 + failstack * 1.308, 2)
+            odds_Success = round(13.08 + 1.308 * failstack, 2)
         elif level_Attempted == enhanceLevel.Duo:
             odds_Success = round(10.63 + 1.063 * failstack, 2)
         elif level_Attempted == enhanceLevel.Tri:
@@ -173,9 +175,16 @@ def odds_Success(attempt):
             odds_Success = round(.2 + .02 * failstack, 2)
             print("Uncertain of actual odds")
 
-    #Max odds can be is 100%
-    if odds_Success > 100:
-        odds_Success = 100
+    elif item_Type == enhanceType.Tuvala_Weapon_Armor:
+        if level_Attempted == enhanceLevel.Tet:
+            odds_Success = round(5 + .5 * failstack, 2)
+        else:
+            print("Still missing information on Tuvala, sorry")
+            exit(1)
+
+    #Max odds can be is 90% because BDO hates you
+    if odds_Success > 90:
+        odds_Success = 90
     print("Odds of Success:", odds_Success)
     return odds_Success
 
@@ -211,10 +220,10 @@ def find_Odds_Over_Time(attempt, odds_Success):
         index -= 1
         print("Number of attempts to get a 90% chance of succeeding using crons: ", index)
 
-    # Horse attempts can't be cronned in the same way, the failstack still goes up.
+    # Horse attempts can't be done in the same way,  as the failstack still goes up per attempt.
     # In order to determine odds of success we need to account for this
     # The odds of a horse attempt are 1% + .2% per failed attempt
-    # As such, our floating variable needs to go up by .2% per attempt
+    # As such, inverseOdds needs to account for this by going down .2% per attempt
     else:
         crons = 1
         percentOdds = odds_Success * .01
@@ -223,7 +232,7 @@ def find_Odds_Over_Time(attempt, odds_Success):
         while crons > .5:
             crons = (inverseOdds - (.002 * index)) ** index
             index += 1
-         # Because of how the loop works, need to subtract one to get the number of iterations before success
+        # Because of how the loop works, need to subtract one to get the number of iterations before success
         index -= 1
         print("Number of attempts to get a 50% chance of success: ", index)
 
@@ -238,13 +247,13 @@ def find_Odds_Over_Time(attempt, odds_Success):
         print("Number of attempts to get a 90% chance of success: ", index)
 
 
-
-
 def RNG_Attempt(odds_Success):
+    # Takes the odds of success and uses random to find if you would have succeeded
+    # User is given the option of trying multiple times so they can understand how bad of an idea enhancing is
     # Annoyingly random.range returns an int, so random.random() * 100 is required
     exit_Code = ''
     failed_Attempts = 0
-    while exit_Code != 'Q':
+    while (exit_Code != 'Q'):
         chanceSucceeded = random.random() * 100
         if odds_Success > chanceSucceeded:
             print("If you tried to succeed with this stack, you would have successfully enhanced. You failed", failed_Attempts, "times before succeeding.")
@@ -255,11 +264,11 @@ def RNG_Attempt(odds_Success):
 
         exit_Code = str(input("Try again? Enter Q to quit"))
         exit_Code = exit_Code.upper()
-        if exit_Code == "Q":
-            exit()
+
 
 attempt = get_Info()
-odds_Success = odds_Success(attempt)
+odds_Success = get_Odds_Success(attempt)
 find_Odds_Over_Time(attempt, odds_Success)
 RNG_Attempt(odds_Success)
+exit()
 
